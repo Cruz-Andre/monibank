@@ -1,4 +1,5 @@
 import ehUmCPF from "./validaCPF.js"
+import ehMaiorDeIdade from "./validaIdade.js"
 
 // captura(seleciona) todos os campos que tem required 
 const camposDoFormulario = document.querySelectorAll("[required]")
@@ -10,5 +11,9 @@ function verificaCampo(campo) {
   console.log(campo)
   if (campo.name == 'cpf' && campo.value.length >= 11) {
     ehUmCPF(campo)
+  }
+
+  if (campo.name == 'aniversario' && campo.value != '') {
+    ehMaiorDeIdade(campo)
   }
 }
