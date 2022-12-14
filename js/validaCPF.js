@@ -1,13 +1,13 @@
 export default function ehUmCPF(campo) {
+  
   const cpf = campo.value.replace(/\.|-/g, "")
+  
   if (verificaNumerosRepetidos(cpf) || verificaPrimeiroDigito(cpf) || verificaSegundoDigito(cpf)) {
-    console.log('esse cpf não existe!')
-  } else {
-    console.log('existe o cpf')
-  }
-  console.log('É cpf Repetido?', verificaNumerosRepetidos(cpf))
-  console.log('1º digito Inválido?', verificaPrimeiroDigito(cpf))
-  console.log('2º digito Inválido?', verificaSegundoDigito(cpf))
+    campo.setCustomValidity('Esse cpf não é válido')
+  } 
+  // console.log('É cpf Repetido?', verificaNumerosRepetidos(cpf))
+  // console.log('1º digito Inválido?', verificaPrimeiroDigito(cpf))
+  // console.log('2º digito Inválido?', verificaSegundoDigito(cpf))
 }
 
 function verificaNumerosRepetidos(cpf) {
@@ -40,7 +40,8 @@ function verificaPrimeiroDigito(cpf) {
   if(soma == 10 || soma == 11) {
     soma = 0
   }
-  console.log(soma, cpf[9])
+  
+  //console.log(soma, cpf[9])
   return soma != cpf[9]
 }
 
@@ -58,6 +59,7 @@ function verificaSegundoDigito(cpf) {
   if(soma == 10 || soma == 11) {
     soma = 0
   }
-  console.log(soma, cpf[10])
+  
+  //console.log(soma, cpf[10])
   return soma != cpf[10]
 }

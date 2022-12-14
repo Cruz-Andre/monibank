@@ -10,6 +10,7 @@
 * Manipulação de DOM
 * localStorage
 * Validação de campos do fomulário
+* validityState
 
 ## Tecnologias utilizadas no projeto
 * HTML
