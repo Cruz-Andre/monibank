@@ -60,7 +60,17 @@
 
 @media screen and (max-width: 900px) {
     .cabecalho {
-        margin: 2em;
+        margin: 1em;
+        flex-direction: column;
+        row-gap: 0.5em;
+    }
+
+    .cabecalho-lista {
+        margin: 0;
+    }
+    
+    .cabecalho-lista li:nth-child(4) {
+        margin-right: 10px;
     }
 
     .cabecalho__pesquisa,

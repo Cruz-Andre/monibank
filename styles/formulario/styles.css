@@ -145,7 +145,7 @@
 
 @media screen and (max-width: 900px) {
     .formulario {
-        width: 70%;
+        width: 100%;
     }
 
     .formulario__etapas {
@@ -157,6 +157,28 @@
     }
 
     .container {
-        margin: 2em;
+        margin: 1em;
+    }
+
+    .banner {
+        background-position: center;
+        height: initial;
+    }
+    
+    .banner__titulo {
+        width: initial;
+        margin: 1em;
+    }
+
+    .campo__escrita {
+        box-sizing: border-box;
+    }
+
+    .campo__escrita--menor {
+        width: 100%;
+    }
+
+    .formulario__texto-secundario {
+        margin: initial;
     }
 }

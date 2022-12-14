@@ -144,4 +144,25 @@
     .conta__titulo {
         padding: 1em 0;
     }
+
+    .banner {
+        height: initial;
+    }
+    
+    .banner__titulo {
+        width: initial;
+        margin: 1em;
+    }
+
+    .lista-servicos {
+        margin: 3em 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .item-servicos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }

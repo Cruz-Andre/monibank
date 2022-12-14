@@ -20,7 +20,7 @@ formulario.addEventListener("submit", e => {
 })
 
 // para usar o .map() tem que transformar o camposDoFormulario em um array, visto que ele é um nodeList
-var i = camposDoFormulario.forEach(campo => {
+camposDoFormulario.forEach(campo => {
   campo.addEventListener("blur", () => verificaCampo(campo))
   campo.addEventListener("invalid", evento => evento.preventDefault())
 })
@@ -88,8 +88,10 @@ function verificaCampo(campo) {
   const validadorDeInput = campo.checkValidity()
   if(!validadorDeInput) {
     mensagemErro.textContent = mensagem
+    campo.style.border = "2px solid red"
   } else {
     mensagemErro.textContent = ''
+    campo.style.border = "2px solid var(--azul-claro)"
   }
 
 }
